@@ -23,14 +23,4 @@ router.get("/products/:id", async (req, res, next) => {
   }
 });
 
-// router.get("/products/:id", async (req, res, next) => {
-//   try {
-//     const id = req.params.id;
-//     const getProductById = await Product.findByPk(id);
-//     res.send(getProductById);
-//   } catch (e) {
-//     next(e);
-//   }
-// });
-
 module.exports = router;
