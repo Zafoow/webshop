@@ -4,6 +4,7 @@ const Product = require("../models").product;
 
 const router = new Router();
 
+// Find Products
 router.get("/products", async (req, res, next) => {
   try {
     const getProducts = await Product.findAll(req.body);
@@ -13,6 +14,7 @@ router.get("/products", async (req, res, next) => {
   }
 });
 
+// Find Products by ID
 router.get("/products/:id", async (req, res, next) => {
   try {
     const id = req.params.id;
